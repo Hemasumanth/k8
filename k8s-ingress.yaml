@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vllm-llama7b
+  namespace: vllm
+spec:
+  rules:
+  - host: llama7b.yourdomain.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: vllm-llama7b
+            port:
+              number: 8000 
