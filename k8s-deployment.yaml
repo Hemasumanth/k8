@@ -54,4 +54,4 @@ spec:
           value: "300"  # 5 minutes in seconds
       restartPolicy: Always
       nodeSelector:
-        nvidia.com/gpu.present: "true" 
+        nvidia.com/gpu.present: "true"
